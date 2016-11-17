@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="description" content="Blue Bus is a family owned bus company offering charters, tours, and corporate events." />
+  <title>Blue Bus</title>
+  
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://use.fontawesome.com/3cee820a44.js"></script>
+  
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="Blue Bus" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://bluebus.com.au" />
+  <meta property="og:image" content="images/logo.png" />
+  
+  <!-- CSS -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <!-- Service worker -->
+  <script>
+  if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    // Registration was successful
+    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+  }).catch(function(err) {
+    // registration failed :(
+    console.log('ServiceWorker registration failed: ', err);
+  });
+}
+  </script>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="blue">
+  <meta name="apple-mobile-web-app-title" content="Blue Bus">
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+ 
+  
+</head>
+	
+
+	
+<body class="defaultcursor">
+  
+  <!-- Nav bar -->
+  <div class="navbar-fixed">
+	  <nav class="blue hoverable" role="navigation">
+    <div class="nav-wrapper container">
+		<a id="logo-container" href="#index-banner" class="brand-logo white-text">Blue Bus</a>
+		
+		<!--Cpu nav-->
+	  <ul class="right hide-on-med-and-down">
+    <li><a class="white-text waves-effect waves-dark tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home" href="#index-banner"><i class="material-icons white-text">home</i></a></li>
+		<li><a class="white-text waves-effect waves-dark tooltipped" data-position="bottom" data-delay="50" data-tooltip="Charters &amp; Tours" href="#charters"><i class="material-icons white-text">map</i></a></li>
+		<li><a class="white-text waves-effect waves-dark tooltipped" data-position="bottom" data-delay="50" data-tooltip="School Bus Services" href="#schoolservices"><i class="material-icons white-text">directions_bus</i></a></li>
+		<li><a class="white-text waves-effect waves-dark tooltipped" data-position="bottom" data-delay="50" data-tooltip="Educational Trips" href="#edutrips" style="font-size:"><i class="material-icons white-text">school</i></a></li>
+		<li><a class="white-text waves-effect waves-dark tooltipped" data-position="bottom" data-delay="50" data-tooltip="About Us" href="#aboutus"><i class="material-icons white-text">people</i></a></li>
+		<li><a class="white-text waves-effect waves-dark tooltipped" data-position="bottom" data-delay="50" data-tooltip="Contact Us" href="#contactus"><i class="material-icons white-text">settings_phone</i></a></li>
+		<li><a class="modal-trigger white-text waves-effect waves-dark tooltipped" data-position="bottom" data-delay="50" data-tooltip="Help" href="#modalhelpcpu"><i class="material-icons white-text">help</i></a></li>
+      </ul>
+      
+      <!-- Phone/tablet help -->
+      <ul class="right hide-on-large-only">
+      <li><a class="modal-trigger white-text waves-effect waves-dark" href="#modalhelpphone"><i class="material-icons white-text">help</i></a></li>
+      </ul>
+      
+      <!-- Mobile nav -->
+      <ul id="nav-mobile" class="side-nav white">
+    <li><div class="userView grey lighten-3">
+      <a href="#index-banner"><img src="images/logo.png" width="150" alt="Blue Bus logo"></a>
+      <a href="#!name"><span class="name">Blue Bus</span></a>
+      <a href="mailto:info@bluebus.com.au"><span class="email">info@bluebus.com.au</span></a>
+    </div></li>
+    <!--<li><div class="divider"></div></li>-->
+    <li><a class="waves-effect waves-dark" href="#index-banner"><i class="material-icons left">home</i> Home</a></li>
+		<li><a class="waves-effect waves-dark" href="#charters"><i class="material-icons left">map</i> Charters &amp; Tours</a></li>
+		<li><a class="waves-effect waves-dark" href="#schoolservices"><i class="material-icons left">directions_bus</i> School Bus Services</a></li>
+		<li><a class="waves-effect waves-dark" href="#edutrips"><i class="material-icons left">school</i> Educational Trips</a></li>
+		<li><a class="waves-effect waves-dark" href="#aboutus"><i class="material-icons left">people</i> About Us</a></li>
+		<li><a class="waves-effect waves-dark" href="#contactus"><i class="material-icons left">mail</i> Contact Us</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+	</div>
+  
+  <!-- Parallax section 1 -->
+  <div id="index-banner" class="parallax-container scrollspy">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <p class="center"><img src="images/logo.png" width="200" alt="Blue Bus logo"></p>
+        <div class="row center">
+          <h5 class="header col s12"><i>Going places...</i></h5>
+        </div>
+        <div class="row center">
+			<a href="https://goo.gl/forms/4Zo8FAA0nIZahjTI2" id="download-button" class="btn-large waves-effect waves-light blue lighten-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Click here!">request a quote</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="images/governmenthouse.jpg" alt="Government House"></div>
+  </div>
+
+  <!-- Home -->
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class="material-icons">directions_bus</i></h2>
+            <h5 class="center">Charters and Tours</h5>
+            <p class="center light">Blue Bus has luxury seat-belted and air-conditioned coaches to suit every occasion: group day trips, extended accommodated tours or camping safaris, private, corporate and wedding charters. Contact us to arrange your trip - we're here to help!</p>
+            <p class="center">
+            <a href="#contactus" class="btn-flat blue-text waves-effect waves-blue">Contact us</a></p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <!--<h2 class="center blue-text"><i class="material-icons">people</i></h2>-->
+             <h2 class="center"><img width="49.6" src="images/adventurebus.jpg" alt="Adventure Blue Bus"></h2>
+            <h5 class="center">Blue Bus Travel Club</h5>
+            <p class="center light">Wanting to travel Australia and meet new friends? The Blue Bus Travel Club will start in 2017 and has some wonderful trips and events planned, and we'd love for you to join us on them. Membership is free and gives you access to exclusive offers.</p>
+            <p class="center">
+            <a href="https://goo.gl/forms/DQblthaxl4bEtqAk2" class="btn-flat blue-text waves-effect waves-blue">Join now</a></p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center blue-text">
+              <!--<i class="fa fa-users fa-fw"></i>-->
+              <i class="material-icons">people_outline</i>
+              </h2>
+            <h5 class="center">School Services</h5>
+            <p class="center light">Blue Bus can cater for all your school excursion and charter needs, from Canberra trips and band tours to field trips and sports transfers. We also operate school services on Russell and Macleay Islands and for Faith Lutheran College, Redlands.</p>
+            <p class="center">
+            <a href="#schoolservices" class="btn-flat blue-text waves-effect waves-blue">Route Info</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Parallax section 2 -->
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12">Blue Bus can take you anywhere in Australia that you've ever wanted to go.</h5>
+        </div>
+      </div>
+    </div>
+	  <div class="parallax"><img src="images/IMG_2034.jpg" alt="Waterfall"></div>
+  </div>
+
+  <!-- Charters & Tours -->
+  <div id="charters" class="container scrollspy">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Charters &amp; Tours</h4>
+          <p>Blue Bus caters to all types of groups with our coaches ranging from 37 up to 57 seats. Our coaches are air-conditioned with reclining, seat-belted comfortable seats with plenty of legroom. In addition to our standard fleet, we also have a wheelchair accessible bus available.</p>
+          <ul class="collapsible left-align" data-collapsible="expandable">
+          <li>
+          <div class="collapsible-header waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Extended Tours</div>
+          <div class="collapsible-body left-align">
+          <p>Blue Bus has the equipment and experience to take your group on an extended tour anywhere in Australia.<br>
+          <br>Our coaches range from 37 seats through to 57 seats including a special luxury toilet-equipped coach for long distance touring.
+          <br>All our coaches are air-conditioned with reclining seat-belted comfortable seats with plenty of legroom.
+          <br>All are TV/CD/DVD/iPod equipped.
+          <br>We have ample storage space for luggage and can bring an additional enclosed storage trailer for extra equipment, if needed.
+          <br>We have a full set of camping equipment – tents, bed-rolls, stretchers (if required).
+          <br>We provide stools/chairs, tables, cutlery, crockery – even the dishwasher!
+          <br>We have a fully equipped mobile safari kitchen and a qualified cook to provide delicious catering for your trip (including special dietary requirements).<br>
+          <br>We can customise an itinerary especially for your group. We’ll organise the accommodation, meals (as required) and all attractions in an inclusive package so there is just one upfront cost to your travellers, and all that is left for them to do is sit back and relax!</p>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Charters &amp; Day Trips</div>
+          <div class="collapsible-body left-align">
+          <p>We can help plan a day-trip for your group to anywhere in south-east Queensland, or you might like to peruse our menu of our <a href="https://docs.google.com/document/d/1h544NynWtwd-J7nAZ2pwKS9EoqxEpOeSpv8TBfQvp1k">delectable day-trip ideas.</a><br>
+          <br>We do:
+          <br>Day trips to Toowoomba’s Carnival of Flowers
+          <br>Garden trips for Garden Clubs
+          <br>Golf trips for golf enthusiasts
+          <br>Craft Group transfers to the Brisbane Stitches and Craft Show
+          <br>Bowls trips to Stradbroke Island
+          <br>Day trips to see the pelicans and explore the Bee Gees Way at Redcliffe
+          <br>Transfers of wedding guests to and from their wedding destination
+          <br>Airport transfers
+          <br>Or any other day trip destination or charter you can think of<br>
+          <br>We can provide gazebos for shelter, tables, chairs, morning tea and lunch or just hot water if you want to cater for yourselves.
+          <br>Simply contact us <a href="https://goo.gl/forms/4Zo8FAA0nIZahjTI2">here</a>, tell us where you want to go, and we’ll be happy to help!</p>
+          </div>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parallax section 3 -->
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12">Buses ranging from 37 to 57 seats available.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/IMG_2011.jpg" alt="Blue Bus"></div>
+  </div>
+  
+  <!-- School Bus Services -->
+  <div id="schoolservices" class="container scrollspy">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>School Bus Services</h4>
+          <p>Blue Bus runs school bus services on Russell Island and Macleay Island (Bay Islands). We also operate bus services for Faith Lutheran College, Redlands.</p>
+          <ul class="collapsible left-align" data-collapsible="expandable">
+          <li>
+          <div class="collapsible-header waves-effect waves-blue active"><i class="material-icons blue-text">map</i>School Bus Maps</div>
+          <div class="collapsible-body center-align">
+          <div class="row">
+          <br><a class="waves-effect waves-light btn-large blue" href="https://www.google.com/maps/d/edit?mid=z0PdUIxGokSY.kQtChKyLhEdc">FLCR Northern Run</a> <a class="waves-effect waves-light btn-large blue" href="https://www.google.com/maps/d/edit?mid=zCdXCCavO5s8.kneh5X_cUghE">FLCR Southern Run</a>
+          </div>
+          <div class="row">
+          <a class="waves-effect waves-light btn-large blue" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kEzMY6-QSZDw"> Russell Island Primary </a> <a class="waves-effect waves-light btn-large blue" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kjuPokEgxMYI">Russell Island Secondary</a>
+          </div>
+          <div class="row">
+          <a class="waves-effect waves-light btn-large blue" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kTyLsgHLXQqA">Macleay Island Primary</a> <a class="waves-effect waves-light btn-large blue" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kqBJEU5TDKt4">Macleay Island Secondary</a>
+          </div>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header  waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Russell Island School Bus Runs</div>
+          <div class="collapsible-body left-align">
+          <div class="row">
+          <p>The <a href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kEzMY6-QSZDw">Russell Island Primary Run</a> starts at 7:40am at the corner of Barcelona Terrace and Bayswater Road and heads around Wahine Dr and Hume St to Centre Rd. It then goes south with a detour to the end of Shore St then further south to the corner of Headland Crt and The Boulevarde. The bus then returns north along Centre Rd before turning down Stradbroke Dr as far as Yara St. It then continues north along Centre Rd to Minjerriba Rd. The bus does a loop around Channel St, Rossi Avenue and returns along Jackson Rd to drop off at Russell Island Primary School in Fern Tce. The bus then continues out along Canaipa Rd to near the end of Canaipa Pt before returning to Russell Island Primary school. The afternoon run does the morning run in reverse until Barcelona, where the run travels the route along the eastern side of the island then finishes on the western side at Gilcrest and Palm Beach Rds at approx. 3:40pm).<br>
+          <br>The <a href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kjuPokEgxMYI">Russell Island Secondary Run</a> starts at 7:00am at the corner of Glendale and Centre Roads and heads north along Centre Rd. It detours out along Canaipa Rd to near the end of Canaipa Pt before terminating at the Russell Island Ferry terminal where the students catch the 7:30am ferry to the mainland at Redland Bay (Weinam Creek Ferry Terminal). The afternoon run meets the ferry at 3:55pm and does the island run in reverse (finishing at Glendale and Centre Rds at approx. 4:20pm).</p>
+          <div class="col l6 s12 center"><a class="btn hoverable" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kEzMY6-QSZDw">Russell Island Primary Map</a></div><br class="hide-on-large-only">
+          <div class="col l6 s12 center"><a class="btn hoverable" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kjuPokEgxMYI">Russell Island Secondary Map</a></div></div><br>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header  waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Macleay Island School Bus Runs</div>
+          <div class="collapsible-body left-align">
+          <div class="row">
+          <p>The <a href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kTyLsgHLXQqA">Macleay Island Primary Run</a> starts at approx. 8:04am in Dalpura St and heads north along Coondooroopa Dr to Kate St and then heads south down to drop off at Macleay Island State school. The bus then meets the 8:33 am ferry at the Macleay Island Ferry terminal and picks up students from other islands. The bus then transports them to Macleay Island State School. The afternoon run picks up the inter-island students at school and meets the ferry at 3:00pm and then does the island run in reverse finishing at approx. 3:20pm.<br>
+          <br>The <a href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kqBJEU5TDKt4">Macleay Island Secondary Run</a> starts at 7:10am at the intersection of Kate and Beelong Sts and heads south along Kate St and High Central Rd to Francis Rd. It turns down Gregory St to Scotts Rd then south along Brighton Rd to Macleay Island Ferry terminal where the students catch the 7:30am ferry to the mainland at Redland Bay (Weinam Creek Ferry Terminal). The afternoon run meets the ferry at 3:58pm and does the island run in reverse (finishing at Kate and Beelong Sts at approx. 4:20pm).</p>
+          <div class="col l6 s12 center"><a class="btn hoverable" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kTyLsgHLXQqA">Macleay Island Primary Map</a></div>
+          <div class="col l6 s12 center"><a class="btn hoverable" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kqBJEU5TDKt4">Macleay Island Secondary Map</a></div></div><br>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header  waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Faith Lutheran College Bus Runs</div>
+          <div class="collapsible-body left-align">
+          <div class="row">
+          <p>The <a href="http://www.faithlutheran.qld.edu.au/our-college/bus-route-north">FLCR Northern Run</a> starts in Capalaba and picks up in Birkdale, Ormiston, at Cleveland Railway station and the Stradbroke Island Ferry terminal before dropping off at the Faith Junior campus, Link Rd and the Faith Senior campus, Beveridge Rd.<br>
+          <br>The <a href="http://www.faithlutheran.qld.edu.au/our-college/bus-route-south">FLCR Southern Run</a> takes in Mt Cotton and Redland Bay and picks up at the Weinam Creek ferry terminal (for Bay Island travellers) before dropping off at the Faith Junior campus, Link Rd and the Faith Senior campus, Beveridge Rd.<br>
+          <br>For more information on stops and times, see <a href="http://www.faithlutheran.qld.edu.au/our-college">faithlutheran.qld.edu.au/our-college</a>.<br>
+          <br>Tickets and term passes are available at the Junior and Middle School Offices and must be paid in advance. Contact Faith Lutheran College, Redlands for more information.</p>
+          <div class="col l6 s12 center"><a class="btn hoverable" href="https://www.google.com/maps/d/edit?mid=z0PdUIxGokSY.kQtChKyLhEdc">FLCR Northern Run Map</a></div>
+          <div class="col l6 s12 center"><a class="btn hoverable" href="https://www.google.com/maps/d/edit?mid=zCdXCCavO5s8.kneh5X_cUghE">FLCR Southern Run Map</a></div></div><br>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>How to apply for a school bus pass on the Bay Islands</div>
+          <div class="collapsible-body left-align">
+          <p>The School Transport Assistance Scheme (STAS) provides assistance to enable eligible school students to attend education facilities. The following is a brief summary of the eligibility criteria as it generally applies to island residents. Full details of eligibility criteria and application forms can be found at <a href="http://www.tmr.qld.gov.au/schooltransport">www.tmr.qld.gov.au/schooltransport</a>.<br>
+          <br>If you are an island resident and your child is attending your nearest state primary school, your child may be eligible for free school bus travel if you live 3.2 km or more from the local school (years P-7). You can obtain a Bus Travel Assistance Application form (brown) from the school bus driver. This must be filled out and returned to the driver as soon as possible so that your child can be issued with a bus pass. All secondary school students on the islands are eligible as the islands are more than 4.8km to the nearest state secondary school.<br>
+          <br>Bus Safety-Net Scheme: If you live 3.2 km or less from the primary school and your primary aged child is listed on a concession card (i.e. Health Care Card, Pensioner Concession Card or Dept. of Veterans&rsquo; Affairs Pensioner Concession Card), you may be eligible for free bus travel, providing there is spare capacity on the bus. You need to obtain a Bus Travel Assistance Safety-Net Application form (purple) from the school bus driver. This must be filled out and returned to the driver along with a photocopy of the concession card showing the child&rsquo;s name as soon as possible so that your child can be eligible for travel.<br>
+          <br>If you live 3.2 km or less from the school and you do not have a concession card but would like your child to catch the bus to school, you can pay a fare to the driver. Fares are $1.00 per child per trip. All school students travelling on school buses need to abide by the <a href="http://translink.com.au/sites/default/files/assets/resources/travel-information/network-information/school/code-of-conduct-student-factsheet.pdf">Code of Conduct for School Bus Travel (QT)</a>. This outlines the rights and responsibilities and the behaviour expected of students whilst travelling on the school bus. The consequences of failing to meet the behaviour expectations outlined in the code are clearly stated. This means that your child may be refused travel on the bus for a period of time, if they are unable to meet those expectations. These consequences will be strictly enforced for the safety and enjoyment of all bus travellers.</p>
+          </div>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parallax section 4 -->
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12">Morning teas and light lunches available for day trips.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/IMG_2051.jpg" alt="Catered lunches and snacks"></div>
+  </div>
+  
+  <!-- Educational Trips -->
+  <div id="edutrips" class="container scrollspy">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Educational Trips</h4>
+          <p>Blue Bus provides comfortable, safe and reliable buses for school, college, university and vacation care excursions and transfers.</p>
+          <ul class="collapsible left-align" data-collapsible="expandable">
+          <li>
+          <div class="collapsible-header waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Educational Charters</div>
+          <div class="collapsible-body left-align">
+          <p>We can help you with:
+          <br>Inter-school sport transfers
+          <br>Excursions
+          <br>Field-trips
+          <br>Museum trips
+          <br>Vacation Care Mystery trips<br>
+          <br>We support the Licence to Play outdoors program and are happy to help design day-trips to give your children a chance to visit parks, go geocaching and tick off their Nature Play Passports. For more information on this program, visit <a href="http://www.natureplayqld.org.au/programs/passport-to-an-amazing-childhood">Nature Play Queensland</a>.<br>
+          <br>Complete the booking inquiry form <a href="https://goo.gl/forms/4Zo8FAA0nIZahjTI2">here</a> and we will get back to you with a quote within 24 hours.</p>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header  waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Tours &amp; Extended Trips</div>
+          <div class="collapsible-body left-align">
+          <p>We have fully equipped and comfortable long-distance coaches with air-conditioning, reclining, seat-belted comfortable seats with plenty of leg-room and optional toilet-equipped. All our coaches have CD/DVD/iPod connection and we have optional fully enclosed luggage trailers.<br>
+          <br>We can help with your school music or sport program travel requirements. We have enclosed storage trailers and plenty of under-floor storage space for extended band tours and choir trips or sporting exchanges.<br>
+          <br>We can help organise extended accommodated tours such as the popular school Canberra trip. The Australian Government provides some financial assistance for students in Years 4-12 across Australia to travel to our nation’s capital, Canberra. For information about the Parliament and Civics Education Rebate (PACER), click <a href="http://www.pacer.org.au/">here</a>.<br>
+          <br>We have full camping equipment and a fully-equipped mobile kitchen trailer (with a fully qualified camp cook!) for extended trips including fieldtrips and camping safaris. We can travel anywhere in Australia and are happy to customise your itinerary for you. Teachers can also take advantage of the Outback Queensland Education Subsidy Scheme to receive financial assistance for students to travel and explore Queensland’s outback heritage. For further information and to download the Outback Queensland Education Handbook which aligns themes of Outback Queensland with the Australian Curriculum, click <a href="http://teq.queensland.com/Destinations/Outback-Queensland/Outback-Education-Subsidy-Scheme">here</a>.<br>
+          <br>We support the Licence to Play Outdoors program and are happy to help design tours to give your children a chance to visit national parks, camp under the stars and tick off their Nature Play Passports. For more information on this program, visit <a href="http://www.natureplayqld.org.au/resources/resources-for-schools">Nature Play Queensland</a>.<br>
+          <br>Complete the tour inquiry form <a href="https://goo.gl/forms/4Zo8FAA0nIZahjTI2">here</a> and we will contact you within 24 hours.</p>
+          </div>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parallax section 5 -->
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12">Branded school buses for Faith Lutheran College.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/IMG_2058.jpg" alt="Fath Blue Bus branding"></div>
+  </div>
+  
+  <!-- About Us -->
+  <div id="aboutus" class="container scrollspy">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>About Us</h4>
+          <p>Blue Bus is a family owned company based in the Redlands, Queensland.</p>
+          <ul class="collapsible left-align" data-collapsible="expandable">
+          <li>
+          <div class="collapsible-header  waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>What We Do</div>
+          <div class="collapsible-body left-align">
+          <p>At Blue Bus, we provide:<br>
+          <br>Day tours and charters for groups anywhere in South-East Queensland.
+          <br>Extended accommodated tours.
+          <br>Fully catered camping safaris.
+          <br>School excursions, sports charters, transfers to extra-curricular activities and camps.
+          <br>Extended educational tours such as Canberra trips, ski trips, and outback camping safaris.
+          <br>School services on Russell and Macleay Islands, taking students to the Primary schools on both islands and across to the Redland Bay Marina, where students can make connections to local high schools.
+          <br>We also operate two private school services for Faith Lutheran College, Redlands, picking up in the Mt Cotton/Redland Bay area and in the Birkdale/Cleveland area.</p>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header  waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Vision</div>
+          <div class="collapsible-body left-align">
+          <p>Our vision is that Blue Bus will be the company of choice for groups seeking professional, tailor-made charters and tours, and safe and reliable school services.</p>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header  waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Mission</div>
+          <div class="collapsible-body left-align">
+          <p>Our Mission at Blue Bus is to provide our passengers with an enjoyable, relaxed, and comfortable experience in our fleet of clean, reliable, and well-maintained vehicles that are driven by professional, safety-conscious, caring and happy drivers.</p>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header  waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>Values</div>
+          <div class="collapsible-body left-align">
+          <p>At Blue Bus, we value:
+          <br>Dependability
+          <br>Consistency
+          <br>Honesty
+          <br>Responsibility
+          <br>A sense of fun
+          <br>Family spirit</p>
+          </div>
+          </li>
+          <li>
+          <div class="collapsible-header  waves-effect waves-blue"><i class="material-icons blue-text">directions_bus</i>History</div>
+          <div class="collapsible-body left-align">
+          <!--<div class="container"> -->
+          <div class="center container"><br><img class="materialboxed responsive-img" data-caption="Geoff & Sandra" src="images/historyphoto.jpg" alt="Geoff & Sandra">Click image to enlarge</div>
+          <p>
+          Blue Bus owner Geoff Jacob has worked in the bus industry since 1987, when he started working for Mylon Motorways in Wodonga as a coach driver and mechanic. He and his wife, Sandra, worked as a coach driver/cook team for Pat Mangan’s Swagman Tours in 1994 taking tours all over Australia from Tasmania to Cape York, through the Red Centre, across the Nullarbor, and up the West Coast to Darwin.<br>
+          <br>Geoff then worked for Palmwoods Coaches on the Sunshine Coast before buying the Russell Island School Bus Service in 2002. This was a small school run with only a 30 seat bus. They bought the Macleay Island School Bus Service two years later and operated a mechanical workshop on Russell Island for a number of years.<br>
+          <br>In 2009 Blue Bus commenced operations based out of Victoria Point, operating a private school run and doing day trips, charters, extended tours and camping safaris. Our fleet (and staff) has grown over the years and we now have buses ranging from 37 seats through to 57 seats, from school buses to luxury toilet-equipped long distance coaches. We transport over 400 students daily on our buses to school and provide travel for a variety of groups of all ages from vacation care children, sporting groups, travellers from overseas through to social day-trippers.</p>
+          </div>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parallax section 6 -->
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12">High quality leather seated interiors available on a range of coaches.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/leatherseats.jpg" alt="Leather Seats"></div>
+  </div>
+  
+  <!-- Contact us -->
+  <div id="contactus" class="container scrollspy">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+        </div>
+        <div class="col s12 l8">
+        
+        <div class="col s12 l10">
+          <p class="left-align"><b>Geoff &amp; Sandra Jacob</b>
+          <br>Bus Operators
+          <br>One email or phone call is all it takes to get your trip organised. Send us a request using the link below and we’ll give you a quote within 24 hours.<br>
+          <br>Address: PO Box 5240, Victoria Point Qld 4165
+          <br>Mobile phone: <a href="tel:0419712786">0419 712 786</a>
+          <br>Work phone: <a href="tel:(07)38207815">(07) 3820 7815</a>
+          <br>Fax: (07) 3820 7854
+          <br>Email: <a href="mailto:info@bluebus.com.au">info@bluebus.com.au</a></p>
+          </div>
+        </div>
+        
+        <div class="col s12 l4">
+          <p class="left-align"><b>Quick Links</b>
+          <br>Request a quote <a href="https://goo.gl/forms/4Zo8FAA0nIZahjTI2">here</a>.
+          <br><a href="https://docs.google.com/document/d/1WqwwZSYiv9UxIZgS454ljiMik7kEnVxZdkIz3h6Fo8Y">Privacy Policy</a>
+          <br><a href="https://docs.google.com/document/d/1c6B7ZyZtLbR5drCxoAgMxlzJYTggL79NGMrTU7e-ex8">Conditions of Hire</a><br>
+          <br><b>Social Networking</b>
+          <br>Facebook: <a href="https://www.facebook.com/blueclasstravel">facebook.com/blueclasstravel</a>
+          <br>Twitter: <a href="https://twitter.com/BlueBusTours">twitter.com/BlueBusTours</a>
+          <br>Linked-In: <a href="https://www.linkedin.com/in/sandrajacobbluebus">linkedin.com/in/sandrajacobbluebus</a></p>
+          
+			<!--<div class="left-align row">
+				<form class="col s12" action="mailto:ajacob7111997@gmail.com" enctype="text/plain" method="post">
+					<div class="row">
+						<div class="input-field col s6">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="name" type="text" class="validate">
+							<label for="name">Name</label>
+						</div>
+						<div class="input-field col s6">
+							<i class="material-icons prefix">phone</i>
+							<input id="telephone" type="number" class="validate">
+							<label for="telephone" data-error="Please enter a phone number">Telephone</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">email</i>
+							<input id="email" type="email" class="validate">
+							<label for="email" data-error="Please enter a valid email">Email</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">
+							<i class="material-icons prefix">people</i>
+							<input id="name" type="text" class="validate">
+							<label for="name">Group name</label>
+						</div>
+						<div class="input-field col s6">
+							<i class="material-icons prefix">today</i>
+							<input id="date" type="date" class="validate">
+							<label class="active" for="date">Date of trip</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s4">
+							<i class="material-icons prefix">group_add</i>
+							<input id="passengers" type="number" class="validate">
+							<label for="passengers">Number of passengers</label>
+						</div>
+						<div class="input-field col s3">
+							<i class="material-icons prefix">number</i>
+							<input id="pickup" type="time" class="validate">
+							<label class="active" for="pickup">Pickup time</label>
+						</div>
+						
+					</div>
+					<div class="row">
+						<input type="submit" name="Submit" value="Submit">
+						<button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+					</div>
+					
+					
+				</form>
+			</div>-->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Parallax section 7 -->
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12">Fresh, healthy, and most importantly delicious meals provided for extended tours.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/IMG_2263.jpg" alt="Dinner catering"></div>
+  </div>
+
+	
+	
+	<!-- Footer -->
+  <footer class="page-footer blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="white-text center">Company Bio</h5>
+          <p class="grey-text text-lighten-4">Blue Bus is a family owned company based in the Redlands, Queensland. We have been in operation since 2002, and have made it our mission to be the company of choice for groups seeking professional, tailor-made charters & tours, and safe, reliable school bus services.</p>
+
+
+        </div>
+        <div class="col l4 s12">
+          <h5 class="white-text center">School Bus Maps</h5>
+          <ul>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="https://www.google.com/maps/d/edit?mid=z0PdUIxGokSY.kQtChKyLhEdc">FLCR Northern Run</a></li>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="https://www.google.com/maps/d/edit?mid=zCdXCCavO5s8.kneh5X_cUghE">FLCR Southern Run</a></li>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kEzMY6-QSZDw">Russell Island Primary</a></li>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kjuPokEgxMYI">Russell Island Secondary</a></li>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kTyLsgHLXQqA">Macleay Island Primary</a></li>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="https://www.google.com/maps/d/edit?mid=zYcvaFvf37zE.kqBJEU5TDKt4">Macleay Island Secondary</a></li>
+          </ul>
+        </div>
+        <div class="col l4 s12">
+          <h5 class="white-text center">Social</h5>
+          <ul>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="https://www.facebook.com/blueclasstravel">&nbsp;&nbsp; <i class="tiny fa fa-facebook left"></i> Facebook: Blue Bus Tours</a></li>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="mailto:info@bluebus.com.au"><i class="tiny material-icons left">email</i> Email: info@bluebus.com.au</a></li>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="tel:0419712786"><i class="tiny material-icons left">phone_iphone</i> Mobile: 0419 712 786</a></li>
+            <li><a class="white-text waves-effect waves-light btn-flat truncate" href="tel:073207815"><i class="tiny material-icons left">call</i> Work: 3820 7815</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <a class="white-text" onclick="Materialize.toast('oh harambe', 4000)">Made</a> by: <a class="teal-text text-lighten-4 hoverable" href="mailto:ajacob7111997@gmail.com?subject=Design me a website!&body=Hi, I saw the Blue Bus website and loved it so much that I want you to make me a website too!">&nbsp;Adam Jacob&nbsp;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating action button -->
+	<div class="fixed-action-btn" style="bottom: 24px; right: 24px;">
+		<a class="btn-floating btn-large teal accent-4  waves-effect waves-light"><i class="large material-icons">share</i></a>
+		<ul>
+			<li><a class="btn-floating cyan waves-effect waves-light tooltipped" data-position="bottom" data-delay="50" data-tooltip="Facebook" href="https://www.facebook.com/blueclasstravel"><i class="fa fa-facebook"></i><!--<i class="material-icons">person_outline</i>--></a></li>
+			<li><a class="btn-floating green waves-effect waves-light tooltipped" data-position="bottom" data-delay="50" data-tooltip="Email us" href="mailto:info@bluebus.com.au"><i class="material-icons">email</i></a></li>
+			<li><a class="btn-floating orange waves-effect waves-light tooltipped hide-on-large-only" data-position="bottom" data-delay="50" data-tooltip="Mobile" href="tel:0419712786"><i class="material-icons">phone_iphone</i></a></li>
+			<li><a class="btn-floating red waves-effect waves-light tooltipped hide-on-large-only" data-position="bottom" data-delay="50" data-tooltip="Work" href="tel:0738207815"><i class="material-icons">call</i></a></li>
+		</ul>
+	</div>
+
+	
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  
+  <!-- CPU Modals -->
+  <div id="modalhelpcpu" class="modal">
+    <div class="modal-content">
+      <h4>How can we help you?</h4>
+      <p>If you're not great with websites (don't worry, we understand!) feel free to give us a call on either 0419 712 786 or (07) 3820 7815, and we'll help with whatever you need.</p>
+      <p>If you'd just like a guide for this website, click the 'help me' button below.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#modalhelpcpu2" class="modal-action modal-trigger modal-close waves-effect waves-teal btn-flat teal-text hoverable">Help me</a>
+      <a class="modal-action modal-close waves-effect waves-red btn-flat red-text hoverable">I know how to use a website</a>
+    </div>
+  </div>
+  
+  <div id="modalhelpcpu2" class="modal">
+    <div class="modal-content">
+      <h4>Website guide</h4>
+      <p>To navigate around this website, you have two choices: click the buttons up the top to jump to different sections of the website, or simply scroll through the pages.</p>
+      <p>To open up the sections, simply click on the headings.</p>
+    </div>
+    <div class="modal-footer">
+      <!--<a href="#modalhelpcpu3" class="modal-action modal-trigger modal-close waves-effect waves-teal btn-flat teal-text hoverable">Next</a>-->
+      <a href="#modalhelpcpu" class="modal-action modal-trigger modal-close waves-effect waves-teal blue-text btn-flat hoverable">Back</a>
+      <a class="modal-action modal-close waves-effect waves-light btn-flat red-text red-text hoverable">That's enough, close</a>
+    </div>
+  </div>
+  
+  
+  <!-- Phone modals -->
+  <div id="modalhelpphone" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>How can we help you?</h4>
+      <p>If you're not great with websites (don't worry, we understand!) feel free to give us a call on either <a href="tel:0419 712 786">0419 712 786</a> or <a href="tel:(07) 3820 7815">(07) 3820 7815</a>, and we'll help with whatever you need.</p>
+      <p>If you'd just like a guide for this website, click the 'help me' button below.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#modalhelpphone2" class="modal-action modal-trigger modal-close waves-effect waves-teal teal-text btn-flat hoverable">Help me</a>
+      <a class="modal-action modal-close waves-effect waves-red btn-flat red-text hoverable">I know how to use a website</a>
+    </div>
+  </div>
+  
+  <div id="modalhelpphone2" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Website guide</h4>
+      <p>To navigate around this website, you have two choices. You can tap the menu button (the three horizontal lines) up the top, and then tap each link to jump to different sections of the website, or you can simply swipe down through the pages.</p>
+      <p>To open up individual sections, simply click on their headings.</p>
+    </div>
+    <div class="modal-footer">
+      <!--<a href="#modalhelpphone3" class="modal-action modal-trigger modal-close waves-effect waves-teal btn-flat teal-text hoverable">Next</a>-->
+      <a href="#modalhelpphone" class="modal-action modal-trigger modal-close waves-effect waves-teal blue-text btn-flat hoverable">Back</a>
+      <a class="modal-action modal-close waves-effect waves-light btn-flat red-text red-text hoverable">That's enough, close</a>
+    </div>
+  </div>
+
+  </body>
+</html>
