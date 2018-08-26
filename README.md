@@ -1,5 +1,5 @@
 # bluebus
 Repo for the Blue Bus website
 
-Updates automatically pushed from Github to server using FTPloy
-https://ftploy.com/
+Updates automatically pushed from Github to server using Buddy
+https://app.buddy.works
